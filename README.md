@@ -1,10 +1,10 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# Module 1 - Day 4
+# Module 1 - Day 4: JS Advanced Array methods map(), reduce()
 
 ## Advanced Array methods
 
-The `.map()`, `.filter()` and `.reduce()` methods are methods of the Array object that do not mutate the original array.
+The `.map()` and `.reduce()` methods are methods of the Array object that do not mutate the original array.
 
 - The `.map()` method:
   - Receives a function as an argument.
@@ -14,16 +14,6 @@ The `.map()`, `.filter()` and `.reduce()` methods are methods of the Array objec
     const values = [2, 4, 6] const doubledValues = [2, 4, 6].
     const doubledValues = values.map(elm => elm * 2) // [4, 8, 12].
     ````
-    
-- The `.filter()` method:
-  - Takes a function as an argument.
-  - Returns an array with a maximum length equal to the length of the original array.
-  - Transfers to the resulting array each position of the original array where the argued function returns a _truthy_ value.
-    ````javascript
-    const values = [2, 4, 6] const highValues = [2, 4, 6].
-    const highValues = values.filter(elm => elm < 2) // [4, 6] 
-    ````
-  
 - The `.reduce()` method: 
   - Receives as an argument a function with two default parameters: accumulator and iterated value.
   - Can receive a second argument as the initial value for the accumulator.
@@ -32,23 +22,6 @@ The `.map()`, `.filter()` and `.reduce()` methods are methods of the Array objec
     const values = [2, 4, 6] const sum = values.
     const sum = values.reduce((acc, elm) => acc + elm) // 12 
     ````
-  
-The `.sort()` and `.reverse()` methods **mute the original array**.
-
-- The `.sort()` method:
-  - Takes a sort function as an argument, otherwise it sorts the items according to `Unicode` encoding.
-    ````javascript
-    const values = [12, 110, 2]
-    values.sort() // [110, 12, 2]
-    ````
-
-- The `.reverse()` method:
-  - Reverses the order of the elements present in the array.
-    ````javascript
-    const values = [2, 4, 6]
-    values.reverse() // [6, 4, 2]
-    ````
- 
 ## Truthies VS falsies
 The _falsie_ values (`null, undefined, false, NaN, 0, ''`) are rejected by default in conditional structures. Every other value (_truthy_) is accepted by default.
 
